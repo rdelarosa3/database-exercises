@@ -1,5 +1,6 @@
 USE codeup_test_db;
-INSERT INTO quotes (artist, name, release_date, sales, genre)
+TRUNCATE albums;
+INSERT INTO albums (artist, name, release_date, sales, genre)
 VALUES ('Metallica','Master of Puppets', 1986, 4578000.00, 'rock'),
 ('Metallica','...And Justice for All', 1988, 5330000.00, 'rock'),
 ('AC/DC','Back in Black', 1980, 29000000.00, 'rock'),
