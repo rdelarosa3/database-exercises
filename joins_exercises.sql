@@ -25,7 +25,8 @@ FROM dept_manager as dm
               ON dm.emp_no = em.emp_no
          JOIN salaries AS s
               ON em.emp_no = s.emp_no
-where s.to_date LIKE '%9999%'
+where s.to_date LIKE '%9999%' and dm.to_date LIKE '%9999%'
+order by dept_name asc
 
 -- the count of  current titles of employees currently working in the
 -- Customer Service Dept
@@ -37,4 +38,5 @@ FROM titles AS ti
               ON dept.dept_no = demp.dept_no
 WHERE dept_name = 'Customer Service'
 AND ti.to_date LIKE '%9999%'
+AND demp.to_date LIKE'%9999%'
 GROUP BY title
